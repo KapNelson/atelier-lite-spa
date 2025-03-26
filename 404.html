@@ -3,14 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Перенаправлення...</title>
-  <script>
-    setTimeout(function () {
-      window.location.href = "/error";
-    }, 100);
-  </script>
+  <title>404</title>
 </head>
 <body>
-<p>Сторінка не знайдена. Перенаправлення...</p>
+<div class="error-page">
+  <h1>404</h1>
+  <p>Сторінку не знайдено</p>
+  <a class="go-main__btn" onclick="goMain()">На головну</a>
+</div>
+
+<script>
+  function goMain() {
+    window.location.href = '/';
+  }
+</script>
 </body>
+<style>
+  .error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+
+    h1 {
+      font-size: 6rem;
+      color: #d9534f;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      color: white;
+      background-color: #0275d8;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #025aa5;
+      }
+    }
+
+    .go-main__btn {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 24px;
+      color: #fff;
+      font-weight: 500;
+      font-family: 'Roboto', sans-serif;
+      padding: 12px 30px;
+      background-color: #d9534f;
+      border: 2px solid #d9534f;
+      border-radius: 4px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .go-main__btn:hover {
+      background-color: transparent;
+      color: #d9534f;
+    }
+  }
+</style>
 </html>
